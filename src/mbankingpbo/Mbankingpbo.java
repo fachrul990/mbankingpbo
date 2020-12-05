@@ -17,7 +17,7 @@ public class Mbankingpbo {
         lg.setLocationRelativeTo(null);
         lg.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
         
-        
+       
     }
     
 }

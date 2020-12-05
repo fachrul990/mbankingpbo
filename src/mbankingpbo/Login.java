@@ -149,6 +149,12 @@ public class Login extends javax.swing.JFrame {
         String pin = "123456";
         if(pin.equalsIgnoreCase(pinAtm.getText())){
         JOptionPane.showMessageDialog(null, "Anda sukses login");
+        Home n = new Home();
+        n.setVisible(true);
+        n.pack();
+        n.setLocationRelativeTo(null);
+        n.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
+        this.setVisible(false);
         }
         else{
             JOptionPane.showMessageDialog(null, "PIN yg anda masukan salah!");
