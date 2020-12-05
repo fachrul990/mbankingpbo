@@ -178,6 +178,19 @@ public class Login extends javax.swing.JFrame {
         masuk.login();
         this.setVisible(false);
         
+        /*String pin = "123456";
+        if(pin.equalsIgnoreCase(pinAtm.getText())){
+            JOptionPane.showMessageDialog(null, "Anda sukses login");
+            Home n = new Home();
+            n.setVisible(true);
+            n.pack();
+            n.setLocationRelativeTo(null);
+            n.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
+            this.setVisible(false);
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "PIN yg anda masukan salah!");
+        }*/
     }//GEN-LAST:event_loginbuttonActionPerformed
 
     private void pinAtmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinAtmActionPerformed

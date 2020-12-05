@@ -54,6 +54,7 @@ public class userLogin {
             n.setVisible(true);
             n.pack();
             n.setLocationRelativeTo(null);
+            n.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
             
         }
         else
