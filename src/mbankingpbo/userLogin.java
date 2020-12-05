@@ -55,8 +55,7 @@ public class userLogin {
             n.pack();
             n.setLocationRelativeTo(null);
             n.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
-            Login m = new Login();
-            m.setVisible(false);
+            
         }
         else
         {
