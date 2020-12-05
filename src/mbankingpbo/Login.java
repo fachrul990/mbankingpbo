@@ -176,7 +176,6 @@ public class Login extends javax.swing.JFrame {
         pin = pinAtm.getText();
         userLogin masuk=new userLogin(user,pin);
         masuk.login();
-        this.setVisible(false);
         
         /*String pin = "123456";
         if(pin.equalsIgnoreCase(pinAtm.getText())){
