@@ -54,6 +54,12 @@ public class userLogin {
             n.setVisible(true);
             n.pack();
             n.setLocationRelativeTo(null);
+<<<<<<< Updated upstream
+=======
+            n.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
+            Login lg = new Login();
+            lg.setVisible(false);
+>>>>>>> Stashed changes
             
         }
         else
