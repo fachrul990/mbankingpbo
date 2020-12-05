@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mbankingpbo;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,6 +15,8 @@ public class Login extends javax.swing.JFrame {
     public static String pin;
     public Login() {
         initComponents();
+        setExtendedState(JFrame.MAXIMIZED_HORIZ);
+        setResizable(false);
     }
 
     /**
@@ -31,22 +29,20 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         pinAtm = new javax.swing.JPasswordField();
         loginbutton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        usernameATM = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(34, 40, 49));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jPanel1.setBackground(new java.awt.Color(34, 40, 49));
-
-        jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(238, 238, 238));
-        jLabel2.setText("MASUKKAN PIN ANDA");
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 211, 105));
@@ -65,14 +61,24 @@ public class Login extends javax.swing.JFrame {
 
         loginbutton.setBackground(new java.awt.Color(255, 255, 255));
         loginbutton.setForeground(new java.awt.Color(57, 62, 70));
-        loginbutton.setText("MASUK");
+        loginbutton.setText("Login");
+        loginbutton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         loginbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginbuttonActionPerformed(evt);
             }
         });
+        loginbutton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                loginbuttonKeyPressed(evt);
+            }
+        });
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpg/icons8_bank_cards_80px.png"))); // NOI18N
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpg/icons8_lock_20px_1.png"))); // NOI18N
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpg/icons8_user_20px.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -86,20 +92,22 @@ public class Login extends javax.swing.JFrame {
                         .addGap(117, 117, 117)
                         .addComponent(jLabel4))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
-                        .addComponent(jLabel2))
+                        .addGap(257, 257, 257)
+                        .addComponent(loginbutton))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(240, 240, 240)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pinAtm, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(loginbutton)))))
-                .addContainerGap(167, Short.MAX_VALUE))
+                        .addGap(187, 187, 187)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel2))
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(usernameATM, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pinAtm, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(144, 144, 144)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 339, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGap(133, 133, 133)))
         );
         jPanel1Layout.setVerticalGroup(
@@ -110,15 +118,19 @@ public class Login extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                .addGap(7, 7, 7)
-                .addComponent(pinAtm, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(68, 68, 68)
+                        .addComponent(jLabel4)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(usernameATM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(21, 21, 21)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pinAtm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(27, 27, 27)
                 .addComponent(loginbutton)
-                .addGap(58, 58, 58))
+                .addGap(49, 49, 49))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(23, 23, 23)
@@ -126,11 +138,13 @@ public class Login extends javax.swing.JFrame {
                     .addGap(292, 292, 292)))
         );
 
+        pinAtm.getAccessibleContext().setAccessibleName("");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 561, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,26 +154,36 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void loginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbuttonActionPerformed
+        // TODO add your handling code here:
+        
+        String user=usernameATM.getText();
+        String pin=pinAtm.getText();
+        userLogin masuk=new userLogin(user,pin);
+        masuk.login();
+        
+        /*String pin = "123456";
+        if(pin.equalsIgnoreCase(pinAtm.getText())){
+            JOptionPane.showMessageDialog(null, "Anda sukses login");
+            Home n = new Home();
+            n.setVisible(true);
+            n.pack();
+            n.setLocationRelativeTo(null);
+            n.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
+            this.setVisible(false);
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "PIN yg anda masukan salah!");
+        }*/
+    }//GEN-LAST:event_loginbuttonActionPerformed
+
     private void pinAtmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinAtmActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pinAtmActionPerformed
 
-    private void loginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbuttonActionPerformed
+    private void loginbuttonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_loginbuttonKeyPressed
         // TODO add your handling code here:
-        String pin = "123456";
-        if(pin.equalsIgnoreCase(pinAtm.getText())){
-        JOptionPane.showMessageDialog(null, "Anda sukses login");
-        Home n = new Home();
-        n.setVisible(true);
-        n.pack();
-        n.setLocationRelativeTo(null);
-        n.setDefaultCloseOperation(Login.EXIT_ON_CLOSE);
-        this.setVisible(false);
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "PIN yg anda masukan salah!");
-        }
-    }//GEN-LAST:event_loginbuttonActionPerformed
+    }//GEN-LAST:event_loginbuttonKeyPressed
 
     /**
      * @param args the command line arguments
@@ -204,8 +228,10 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton loginbutton;
     private javax.swing.JPasswordField pinAtm;
+    private javax.swing.JTextField usernameATM;
     // End of variables declaration//GEN-END:variables
 }
