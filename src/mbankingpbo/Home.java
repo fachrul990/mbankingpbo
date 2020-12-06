@@ -33,12 +33,16 @@ public class Home extends javax.swing.JFrame {
         
         if (Login.user.equals("Anhar")){
             rekening.setText("21120119120012");
-            lbsaldo.setText("10000000");
+            saldo=100000000;
+            answer = String.format(" %,.2f ", saldo);
+            lbsaldo.setText(answer);
         }
         else{
             
             rekening.setText("21120119130094");
-            lbsaldo.setText("5000000");
+            saldo=50000000;
+            answer = String.format(" %,.2f ", saldo);
+            lbsaldo.setText(answer);
         }
         
         info.setVisible(false);
@@ -341,9 +345,9 @@ public class Home extends javax.swing.JFrame {
         jLabel13.setText("Rek. Tujuan");
 
         jButton3.setText("OK");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
             }
         });
 
@@ -539,9 +543,16 @@ public class Home extends javax.swing.JFrame {
         p.setVisible(true);
     }//GEN-LAST:event_jLabel5MouseClicked
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         // TODO add your handling code here:
-        saldo = Double.parseDouble(lbsaldo.getText());
+        lg.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        
+        
         masukan = Integer.parseInt(jltransfer.getText());
         
         switch (jComboBox1.getSelectedIndex()) {
@@ -554,9 +565,9 @@ public class Home extends javax.swing.JFrame {
                     hasil = saldo - masukan;
                     saldo = hasil;
                     answer = String.format(" %,.2f ", hasil);
-                    lbsaldo.setText(answer);
                     JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+
                             hasil+ "\n"+ "Berhasil transfer kepada "+rektujuan.getText()+" sebesar :"+ masukan);
+                    lbsaldo.setText(answer);
                 }
                 break;
             case 1:
@@ -590,16 +601,22 @@ public class Home extends javax.swing.JFrame {
                 }
                 break;
             default:
+                if (saldo <= masukan){
+                    JOptionPane.showMessageDialog(rootPane, "Maaf saldo Anda kurang");
+                }
+                else if (saldo > masukan){
+                    JOptionPane.showConfirmDialog(null,"Apakah anda yakin");
+                    hasil = saldo - masukan - 6500;
+                    saldo = hasil;
+                    answer = String.format(" %,.2f ", hasil);
+                    lbsaldo.setText(answer);
+                    JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+
+                            hasil+ "\n"+ "Berhasil transfer kepada "+rektujuan.getText()+" sebesar :"+ masukan +
+                            "dengan biaya Admin 6500");
                 break;
+                }
         }
-            
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-        // TODO add your handling code here:
-        lg.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jLabel8MouseClicked
+    }//GEN-LAST:event_jButton3MouseClicked
 
     /**
      * @param args the command line arguments
