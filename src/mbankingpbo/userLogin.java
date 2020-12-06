@@ -52,11 +52,9 @@ public class userLogin {
         {
             JOptionPane.showMessageDialog(null, "Anda sukses login");
             Home n = new Home();
-            Login lg = new Login();
             n.setVisible(true);
             n.pack();
             n.setLocationRelativeTo(null);
-            lg.setVisible(false);
             
         }
         else
