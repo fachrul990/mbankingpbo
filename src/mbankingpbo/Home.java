@@ -23,6 +23,12 @@ public class Home extends javax.swing.JFrame {
         setVisible(true);
         setResizable(false);
         labelnama.setText(Login.user + "!");
+        jLabel8.setText(Login.user);
+        
+        info.setVisible(false);
+        transfer.setVisible(false);
+        bayar.setVisible(false);
+        
     }
 
     /**
@@ -51,6 +57,7 @@ public class Home extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         transfer = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -66,6 +73,8 @@ public class Home extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
@@ -77,7 +86,7 @@ public class Home extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(34, 40, 49));
         jButton1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpg/icons8_initiate_money_transfer_60px.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpg/icons8_initiate_money_transfer_60px_1.png"))); // NOI18N
         jButton1.setText("Transfer");
         jButton1.setBorderPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -142,11 +151,17 @@ public class Home extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(34, 34, 34)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(labelnama))
-                                .addGap(394, 394, 394)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(34, 34, 34)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel4)
+                                            .addComponent(labelnama))
+                                        .addGap(394, 394, 394))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addContainerGap()
+                                        .addComponent(jLabel7)
+                                        .addGap(190, 190, 190)))
                                 .addComponent(jLabel2))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(26, 26, 26)
@@ -160,11 +175,6 @@ public class Home extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel5)))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                    .addContainerGap(309, Short.MAX_VALUE)
-                    .addComponent(jLabel7)
-                    .addGap(267, 267, 267)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,8 +182,9 @@ public class Home extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 69, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel4)))
                 .addGap(8, 8, 8)
                 .addComponent(labelnama)
@@ -185,11 +196,6 @@ public class Home extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(26, 26, 26)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(216, Short.MAX_VALUE)))
         );
 
         jPanel2.setBackground(new java.awt.Color(57, 62, 70));
@@ -201,7 +207,7 @@ public class Home extends javax.swing.JFrame {
         jLabel6.setText("Informasi Rekening");
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 211, 105));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Nama");
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
@@ -214,6 +220,10 @@ public class Home extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpg/icons8_account_120px_2.png"))); // NOI18N
 
+        jLabel18.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 211, 105));
+        jLabel18.setText("Nama");
+
         javax.swing.GroupLayout infoLayout = new javax.swing.GroupLayout(info);
         info.setLayout(infoLayout);
         infoLayout.setHorizontalGroup(
@@ -225,8 +235,11 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel10)
                     .addComponent(jLabel9)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel6))
+                    .addComponent(jLabel6)
+                    .addGroup(infoLayout.createSequentialGroup()
+                        .addComponent(jLabel18)
+                        .addGap(160, 160, 160)
+                        .addComponent(jLabel8)))
                 .addContainerGap(380, Short.MAX_VALUE))
         );
         infoLayout.setVerticalGroup(
@@ -234,14 +247,16 @@ public class Home extends javax.swing.JFrame {
             .addGroup(infoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel8)
                 .addGroup(infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(infoLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
+                        .addGap(52, 52, 52)
                         .addComponent(jLabel3))
                     .addGroup(infoLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
+                        .addGap(26, 26, 26)
+                        .addGroup(infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel18))
+                        .addGap(40, 40, 40)
                         .addComponent(jLabel10)))
                 .addGap(6, 6, 6)
                 .addComponent(jLabel9)
@@ -334,6 +349,14 @@ public class Home extends javax.swing.JFrame {
 
         jButton4.setText("OK");
 
+        jLabel17.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 211, 105));
+        jLabel17.setText("Pembayaran");
+
+        jLabel19.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 211, 105));
+        jLabel19.setText("Pembayaran");
+
         javax.swing.GroupLayout bayarLayout = new javax.swing.GroupLayout(bayar);
         bayar.setLayout(bayarLayout);
         bayarLayout.setHorizontalGroup(
@@ -352,12 +375,17 @@ public class Home extends javax.swing.JFrame {
                         .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField3)
                             .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(147, 147, 147))))
+                        .addGap(147, 147, 147))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bayarLayout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addGap(237, 237, 237))))
         );
         bayarLayout.setVerticalGroup(
             bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bayarLayout.createSequentialGroup()
-                .addContainerGap(116, Short.MAX_VALUE)
+                .addGap(25, 25, 25)
+                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -380,7 +408,7 @@ public class Home extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addComponent(transfer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 261, Short.MAX_VALUE)))
+                    .addGap(0, 1, Short.MAX_VALUE)))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addComponent(bayar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -432,6 +460,7 @@ public class Home extends javax.swing.JFrame {
         info.setVisible(true);
         transfer.setVisible(false);
         bayar.setVisible(false);
+        jLabel8.setText(Login.user);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -504,6 +533,9 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

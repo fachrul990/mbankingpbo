@@ -176,7 +176,6 @@ public class Login extends javax.swing.JFrame {
         pin = pinAtm.getText();
         userLogin masuk=new userLogin(user,pin);
         masuk.login();
-        this.setVisible(false);
         
     }//GEN-LAST:event_loginbuttonActionPerformed
 
