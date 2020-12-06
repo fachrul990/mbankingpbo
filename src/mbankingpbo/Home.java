@@ -84,7 +84,6 @@ public class Home extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         lbnama = new javax.swing.JLabel();
         lbsaldo = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
         transfer = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -275,8 +274,6 @@ public class Home extends javax.swing.JFrame {
         lbsaldo.setForeground(new java.awt.Color(255, 255, 255));
         lbsaldo.setText("0");
 
-        jButton5.setText("Isi saldo");
-
         javax.swing.GroupLayout infoLayout = new javax.swing.GroupLayout(info);
         info.setLayout(infoLayout);
         infoLayout.setHorizontalGroup(
@@ -297,9 +294,7 @@ public class Home extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(infoLayout.createSequentialGroup()
                         .addComponent(lbsaldo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 315, Short.MAX_VALUE)
-                        .addComponent(jButton5)
-                        .addGap(294, 294, 294))))
+                        .addGap(294, 700, Short.MAX_VALUE))))
         );
         infoLayout.setVerticalGroup(
             infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -321,15 +316,9 @@ public class Home extends javax.swing.JFrame {
                         .addComponent(rekening)))
                 .addGap(6, 6, 6)
                 .addComponent(jLabel9)
-                .addGroup(infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(infoLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lbsaldo)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                        .addComponent(jButton5)
-                        .addGap(55, 55, 55))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbsaldo)
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         transfer.setBackground(new java.awt.Color(57, 62, 70));
@@ -445,8 +434,8 @@ public class Home extends javax.swing.JFrame {
             bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bayarLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
-                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addComponent(jLabel22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(bayarLayout.createSequentialGroup()
                         .addComponent(jLabel19)
@@ -715,7 +704,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
