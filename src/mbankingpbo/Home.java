@@ -17,20 +17,25 @@ public class Home extends javax.swing.JFrame {
     /**
      * Creates new form Home
      */
+    public static Integer saldo;
+    Login lg=new Login();
     public Home() {
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_HORIZ);
         setVisible(true);
         setResizable(false);
         labelnama.setText(Login.user + "!");
-        jLabel8.setText(Login.user);
+        lbnama.setText(Login.user);
         
         info.setVisible(false);
         transfer.setVisible(false);
         bayar.setVisible(false);
-        
+//        int saldoawal = saldo;
+//        saldoawal = 10000000;
+//        String ans=String.format("%,.2f", saldoawal);
+//        lbsaldo.setText(ans);
+//        
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -50,14 +55,18 @@ public class Home extends javax.swing.JFrame {
         pembayaran = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         info = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        rekening = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        lbnama = new javax.swing.JLabel();
+        lbsaldo = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
         transfer = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -140,7 +149,16 @@ public class Home extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 211, 105));
-        jLabel7.setText("ATM BKT");
+        jLabel7.setText("BCI Mobile Banking");
+
+        jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(240, 240, 240));
+        jLabel8.setText("Log out");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -151,30 +169,30 @@ public class Home extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(34, 34, 34)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(34, 34, 34)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel4)
-                                            .addComponent(labelnama))
-                                        .addGap(394, 394, 394))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addComponent(jLabel7)
-                                        .addGap(190, 190, 190)))
-                                .addComponent(jLabel2))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(26, 26, 26)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(pembayaran)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel5)))
-                .addContainerGap())
+                                    .addComponent(jLabel4)
+                                    .addComponent(labelnama))
+                                .addGap(394, 394, 394))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel7)
+                                .addGap(85, 85, 85)))
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(pembayaran)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
+                .addGap(29, 29, 29))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,7 +212,9 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addComponent(pembayaran))
                 .addGap(18, 18, 18)
-                .addComponent(jLabel5)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel8))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -206,9 +226,9 @@ public class Home extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 211, 105));
         jLabel6.setText("Informasi Rekening");
 
-        jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Nama");
+        rekening.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        rekening.setForeground(new java.awt.Color(255, 255, 255));
+        rekening.setText("rekening");
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 211, 105));
@@ -224,6 +244,16 @@ public class Home extends javax.swing.JFrame {
         jLabel18.setForeground(new java.awt.Color(255, 211, 105));
         jLabel18.setText("Nama");
 
+        lbnama.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        lbnama.setForeground(new java.awt.Color(255, 255, 255));
+        lbnama.setText("Nama");
+
+        lbsaldo.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        lbsaldo.setForeground(new java.awt.Color(255, 255, 255));
+        lbsaldo.setText("0");
+
+        jButton5.setText("Isi saldo");
+
         javax.swing.GroupLayout infoLayout = new javax.swing.GroupLayout(info);
         info.setLayout(infoLayout);
         infoLayout.setHorizontalGroup(
@@ -233,41 +263,57 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(89, 89, 89)
                 .addGroup(infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel6)
                     .addGroup(infoLayout.createSequentialGroup()
-                        .addComponent(jLabel18)
-                        .addGap(160, 160, 160)
-                        .addComponent(jLabel8)))
-                .addContainerGap(380, Short.MAX_VALUE))
+                        .addGroup(infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel18)
+                            .addComponent(rekening)
+                            .addComponent(lbnama))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(infoLayout.createSequentialGroup()
+                        .addComponent(lbsaldo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 315, Short.MAX_VALUE)
+                        .addComponent(jButton5)
+                        .addGap(294, 294, 294))))
         );
         infoLayout.setVerticalGroup(
             infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(infoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(infoLayout.createSequentialGroup()
                         .addGap(52, 52, 52)
                         .addComponent(jLabel3))
                     .addGroup(infoLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addGroup(infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel18))
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel10)))
+                        .addComponent(jLabel18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbnama)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rekening)))
                 .addGap(6, 6, 6)
                 .addComponent(jLabel9)
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addGroup(infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(infoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbsaldo)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                        .addComponent(jButton5)
+                        .addGap(55, 55, 55))))
         );
 
         transfer.setBackground(new java.awt.Color(57, 62, 70));
 
         jLabel11.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 211, 105));
-        jLabel11.setText("Rek. Tujuan");
+        jLabel11.setText("Jumlah");
 
         jComboBox1.setBackground(new java.awt.Color(57, 62, 70));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BCI", "BRI", "BNI", "Mandiri" }));
@@ -460,8 +506,11 @@ public class Home extends javax.swing.JFrame {
         info.setVisible(true);
         transfer.setVisible(false);
         bayar.setVisible(false);
-        jLabel8.setText(Login.user);
         
+        if (Login.user.equals("Anhar"))
+            rekening.setText("21120119120012");
+        else
+            rekening.setText("21120119130094");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void pembayaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pembayaranActionPerformed
@@ -480,6 +529,12 @@ public class Home extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        // TODO add your handling code here:
+        lg.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -523,6 +578,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
@@ -550,7 +606,10 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel labelnama;
+    private javax.swing.JLabel lbnama;
+    private javax.swing.JLabel lbsaldo;
     private javax.swing.JButton pembayaran;
+    private javax.swing.JLabel rekening;
     private javax.swing.JPanel transfer;
     // End of variables declaration//GEN-END:variables
 }

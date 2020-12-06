@@ -23,7 +23,8 @@ public class userLogin {
         String[][] data = 
         { 
             {"Anhar", "123456"},
-            {"Fachrul", "123456"} 
+            {"Fachrul", "123456"},
+            {"Admin", "123456"}
         };
         this.data = data;
     }
