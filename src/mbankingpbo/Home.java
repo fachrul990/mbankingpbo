@@ -33,14 +33,14 @@ public class Home extends javax.swing.JFrame {
         
         if (Login.user.equals("Anhar")){
             rekening.setText("21120119120012");
-            saldo=100000000;
+            saldo=10000000;
             answer = String.format(" %,.2f ", saldo);
             lbsaldo.setText(answer);
         }
         else{
             
             rekening.setText("21120119130094");
-            saldo=50000000;
+            saldo=5000000;
             answer = String.format(" %,.2f ", saldo);
             lbsaldo.setText(answer);
         }
@@ -96,12 +96,17 @@ public class Home extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         bayar = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
         jLabel15 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        tfdollar = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
+        tfrupiah = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        tfringgit = new javax.swing.JTextField();
+        tfeuro = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
@@ -148,7 +153,7 @@ public class Home extends javax.swing.JFrame {
         pembayaran.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         pembayaran.setForeground(new java.awt.Color(255, 255, 255));
         pembayaran.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpg/icons8_money_60px.png"))); // NOI18N
-        pembayaran.setText("Pembayaran");
+        pembayaran.setText("Konversi");
         pembayaran.setBorderPainted(false);
         pembayaran.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,6 +164,7 @@ public class Home extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(240, 240, 240));
         jLabel5.setText("About.");
+        jLabel5.setToolTipText("");
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel5MouseClicked(evt);
@@ -183,7 +189,7 @@ public class Home extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -197,20 +203,19 @@ public class Home extends javax.swing.JFrame {
                                 .addComponent(jLabel7)
                                 .addGap(85, 85, 85)))
                         .addComponent(jLabel2))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel8))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(pembayaran)))
+                        .addComponent(pembayaran, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addGap(29, 29, 29))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -382,7 +387,7 @@ public class Home extends javax.swing.JFrame {
             .addGroup(transferLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(transferLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -403,15 +408,18 @@ public class Home extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 211, 105));
-        jLabel14.setText("Pembayaran");
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Listrik", "Air", "Virtual Account" }));
+        jLabel14.setText("Rupiah");
 
         jLabel15.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 211, 105));
-        jLabel15.setText("Nomor");
+        jLabel15.setText("U.S Dollar");
 
-        jButton4.setText("OK");
+        jButton4.setText("Konversi");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jLabel17.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 211, 105));
@@ -419,47 +427,82 @@ public class Home extends javax.swing.JFrame {
 
         jLabel19.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 211, 105));
-        jLabel19.setText("Pembayaran");
+        jLabel19.setText("Konversi Mata Uang");
+
+        jLabel20.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 211, 105));
+        jLabel20.setText("Euro");
+
+        jLabel21.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 211, 105));
+        jLabel21.setText("Ringgit");
+
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpg/icons8_money_120px.png"))); // NOI18N
 
         javax.swing.GroupLayout bayarLayout = new javax.swing.GroupLayout(bayar);
         bayar.setLayout(bayarLayout);
         bayarLayout.setHorizontalGroup(
             bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bayarLayout.createSequentialGroup()
-                .addContainerGap(214, Short.MAX_VALUE)
-                .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bayarLayout.createSequentialGroup()
-                        .addComponent(jButton4)
-                        .addGap(305, 305, 305))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bayarLayout.createSequentialGroup()
-                        .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel15))
-                        .addGap(69, 69, 69)
-                        .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField3)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(147, 147, 147))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bayarLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(bayarLayout.createSequentialGroup()
                         .addComponent(jLabel19)
-                        .addGap(237, 237, 237))))
+                        .addGap(182, 182, 182))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bayarLayout.createSequentialGroup()
+                        .addGap(78, 78, 78)
+                        .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(bayarLayout.createSequentialGroup()
+                                .addComponent(jLabel21)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tfringgit, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bayarLayout.createSequentialGroup()
+                                .addComponent(jLabel20)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tfeuro, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bayarLayout.createSequentialGroup()
+                                .addComponent(jLabel15)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tfdollar, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bayarLayout.createSequentialGroup()
+                                .addComponent(jLabel14)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tfrupiah, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE))))
+                        .addGap(106, 106, 106))))
         );
         bayarLayout.setVerticalGroup(
             bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bayarLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addContainerGap()
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(83, 83, 83)
-                .addComponent(jButton4)
-                .addGap(70, 70, 70))
+                    .addComponent(tfrupiah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14))
+                .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(bayarLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel15)
+                            .addComponent(tfdollar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(8, 8, 8)
+                        .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tfeuro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel20))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel21)
+                            .addComponent(tfringgit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(bayarLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(49, 49, 49))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -549,72 +592,84 @@ public class Home extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jLabel8MouseClicked
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        float rupiah, dollar, euro, ringgit;
+        rupiah=Float.parseFloat(tfrupiah.getText());
+        dollar=(float)(rupiah*0.000071);
+        euro=(float)(rupiah*0.000059);
+        ringgit=(float)(rupiah*0.00029);
+        tfdollar.setText(""+dollar);
+        tfeuro.setText(""+euro);
+        tfringgit.setText(""+ringgit);
+       
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         // TODO add your handling code here:
-        
-        
+
         masukan = Integer.parseInt(jltransfer.getText());
-        
+
         switch (jComboBox1.getSelectedIndex()) {
             case 0:
-                if (saldo <= masukan){
-                    JOptionPane.showMessageDialog(rootPane, "Maaf saldo Anda kurang");
-                }
-                else if (saldo > masukan){
-                    JOptionPane.showConfirmDialog(null,"Apakah anda yakin");
-                    hasil = saldo - masukan;
-                    saldo = hasil;
-                    answer = String.format(" %,.2f ", hasil);
-                    JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+
-                            hasil+ "\n"+ "Berhasil transfer kepada "+rektujuan.getText()+" sebesar :"+ masukan);
-                    lbsaldo.setText(answer);
-                }
-                break;
+            if (saldo <= masukan){
+                JOptionPane.showMessageDialog(rootPane, "Maaf saldo Anda kurang");
+            }
+            else if (saldo > masukan){
+                JOptionPane.showConfirmDialog(null,"Apakah anda yakin");
+                hasil = saldo - masukan;
+                saldo = hasil;
+                answer = String.format(" %,.2f ", hasil);
+                JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+
+                    hasil+ "\n"+ "Berhasil transfer kepada "+rektujuan.getText()+" sebesar :"+ masukan);
+                lbsaldo.setText(answer);
+            }
+            break;
             case 1:
-                if (saldo <= masukan){
-                    JOptionPane.showMessageDialog(rootPane, "Maaf saldo Anda kurang");
-                }
-                else if (saldo > masukan){
-                    JOptionPane.showConfirmDialog(null,"Apakah anda yakin");
-                    hasil = saldo - masukan - 6500;
-                    saldo = hasil;
-                    answer = String.format(" %,.2f ", hasil);
-                    lbsaldo.setText(answer);
-                    JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+
-                            hasil+ "\n"+ "Berhasil transfer kepada "+rektujuan.getText()+" sebesar :"+ masukan +
-                            "dengan biaya Admin 6500");
-                }
-                break;
+            if (saldo <= masukan){
+                JOptionPane.showMessageDialog(rootPane, "Maaf saldo Anda kurang");
+            }
+            else if (saldo > masukan){
+                JOptionPane.showConfirmDialog(null,"Apakah anda yakin");
+                hasil = saldo - masukan - 6500;
+                saldo = hasil;
+                answer = String.format(" %,.2f ", hasil);
+                lbsaldo.setText(answer);
+                JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+
+                    hasil+ "\n"+ "Berhasil transfer kepada "+rektujuan.getText()+" sebesar :"+ masukan +
+                    " dengan biaya Admin 6500");
+            }
+            break;
             case 2:
-                if (saldo <= masukan){
-                    JOptionPane.showMessageDialog(rootPane, "Maaf saldo Anda kurang");
-                }
-                else if (saldo > masukan){
-                    JOptionPane.showConfirmDialog(null,"Apakah anda yakin");
-                    hasil = saldo - masukan - 6500;
-                    saldo = hasil;
-                    answer = String.format(" %,.2f ", hasil);
-                    lbsaldo.setText(answer);
-                    JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+
-                            hasil+ "\n"+ "Berhasil transfer kepada "+rektujuan.getText()+" sebesar :"+ masukan +
-                            "dengan biaya Admin 6500");
-                }
-                break;
+            if (saldo <= masukan){
+                JOptionPane.showMessageDialog(rootPane, "Maaf saldo Anda kurang");
+            }
+            else if (saldo > masukan){
+                JOptionPane.showConfirmDialog(null,"Apakah anda yakin");
+                hasil = saldo - masukan - 6500;
+                saldo = hasil;
+                answer = String.format(" %,.2f ", hasil);
+                lbsaldo.setText(answer);
+                JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+
+                    hasil+ "\n"+ "Berhasil transfer kepada "+rektujuan.getText()+" sebesar :"+ masukan +
+                    " dengan biaya Admin 6500");
+            }
+            break;
             default:
-                if (saldo <= masukan){
-                    JOptionPane.showMessageDialog(rootPane, "Maaf saldo Anda kurang");
-                }
-                else if (saldo > masukan){
-                    JOptionPane.showConfirmDialog(null,"Apakah anda yakin");
-                    hasil = saldo - masukan - 6500;
-                    saldo = hasil;
-                    answer = String.format(" %,.2f ", hasil);
-                    lbsaldo.setText(answer);
-                    JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+
-                            hasil+ "\n"+ "Berhasil transfer kepada "+rektujuan.getText()+" sebesar :"+ masukan +
-                            "dengan biaya Admin 6500");
+            if (saldo <= masukan){
+                JOptionPane.showMessageDialog(rootPane, "Maaf saldo Anda kurang");
+            }
+            else if (saldo > masukan){
+                JOptionPane.showConfirmDialog(null,"Apakah anda yakin");
+                hasil = saldo - masukan - 6500;
+                saldo = hasil;
+                answer = String.format(" %,.2f ", hasil);
+                lbsaldo.setText(answer);
+                JOptionPane.showMessageDialog(rootPane,"Saldo Anda Saat Ini adalah :"+
+                    hasil+ "\n"+ "Berhasil transfer kepada "+rektujuan.getText()+" sebesar :"+ masukan +
+                    " dengan biaya Admin 6500");
                 break;
-                }
+            }
         }
     }//GEN-LAST:event_jButton3MouseClicked
 
@@ -662,7 +717,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -675,6 +729,9 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -684,7 +741,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jltransfer;
     private javax.swing.JLabel labelnama;
     private javax.swing.JLabel lbnama;
@@ -692,6 +748,10 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton pembayaran;
     private javax.swing.JLabel rekening;
     private javax.swing.JTextField rektujuan;
+    private javax.swing.JTextField tfdollar;
+    private javax.swing.JTextField tfeuro;
+    private javax.swing.JTextField tfringgit;
+    private javax.swing.JTextField tfrupiah;
     private javax.swing.JPanel transfer;
     // End of variables declaration//GEN-END:variables
 }
