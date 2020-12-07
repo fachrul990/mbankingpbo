@@ -149,6 +149,7 @@
         <Component class="javax.swing.JPasswordField" name="pinAtm">
           <Properties>
             <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="echoChar" type="char" value="*"/>
           </Properties>
           <AccessibilityProperties>
             <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>

@@ -55,6 +55,7 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setText("BCI Mobile Banking");
 
         pinAtm.setToolTipText("");
+        pinAtm.setEchoChar('*');
         pinAtm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pinAtmActionPerformed(evt);
@@ -194,7 +195,7 @@ public class Login extends javax.swing.JFrame {
             pinAtm.setEchoChar((char)0);
         }
         else{
-            pinAtm.setEchoChar('\u25cf');
+            pinAtm.setEchoChar('*');
         }
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 

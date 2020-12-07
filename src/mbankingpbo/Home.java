@@ -94,18 +94,18 @@ public class Home extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         bayar = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
         tfdollar = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         tfrupiah = new javax.swing.JTextField();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
         tfringgit = new javax.swing.JTextField();
         tfeuro = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
+        rbringgit = new javax.swing.JRadioButton();
+        rbrupiah = new javax.swing.JRadioButton();
+        rbdollar = new javax.swing.JRadioButton();
+        rbeuro = new javax.swing.JRadioButton();
 
         jLabel1.setText("jLabel1");
 
@@ -393,14 +393,6 @@ public class Home extends javax.swing.JFrame {
 
         bayar.setBackground(new java.awt.Color(57, 62, 70));
 
-        jLabel14.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 211, 105));
-        jLabel14.setText("Rupiah");
-
-        jLabel15.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 211, 105));
-        jLabel15.setText("U.S Dollar");
-
         jButton4.setText("Konversi");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -416,49 +408,63 @@ public class Home extends javax.swing.JFrame {
         jLabel19.setForeground(new java.awt.Color(255, 211, 105));
         jLabel19.setText("Konversi Mata Uang");
 
-        jLabel20.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 211, 105));
-        jLabel20.setText("Euro");
-
-        jLabel21.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(255, 211, 105));
-        jLabel21.setText("Ringgit");
-
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpg/icons8_money_120px.png"))); // NOI18N
+
+        rbringgit.setBackground(new java.awt.Color(57, 62, 70));
+        rbringgit.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        rbringgit.setForeground(new java.awt.Color(255, 211, 105));
+        rbringgit.setText("Ringgit");
+
+        rbrupiah.setBackground(new java.awt.Color(57, 62, 70));
+        rbrupiah.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        rbrupiah.setForeground(new java.awt.Color(255, 211, 105));
+        rbrupiah.setText("Rupiah");
+
+        rbdollar.setBackground(new java.awt.Color(57, 62, 70));
+        rbdollar.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        rbdollar.setForeground(new java.awt.Color(255, 211, 105));
+        rbdollar.setText("U.S Dollar");
+
+        rbeuro.setBackground(new java.awt.Color(57, 62, 70));
+        rbeuro.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        rbeuro.setForeground(new java.awt.Color(255, 211, 105));
+        rbeuro.setText("Euro");
 
         javax.swing.GroupLayout bayarLayout = new javax.swing.GroupLayout(bayar);
         bayar.setLayout(bayarLayout);
         bayarLayout.setHorizontalGroup(
             bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bayarLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(61, 61, 61)
                 .addComponent(jLabel22)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(bayarLayout.createSequentialGroup()
                         .addComponent(jLabel19)
                         .addGap(182, 182, 182))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bayarLayout.createSequentialGroup()
+                    .addGroup(bayarLayout.createSequentialGroup()
                         .addGap(78, 78, 78)
                         .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(bayarLayout.createSequentialGroup()
-                                .addComponent(jLabel21)
+                                .addComponent(rbrupiah)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tfrupiah, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(bayarLayout.createSequentialGroup()
+                                .addComponent(rbdollar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tfdollar, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(bayarLayout.createSequentialGroup()
+                                .addComponent(rbeuro)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tfeuro, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(bayarLayout.createSequentialGroup()
+                                .addComponent(rbringgit)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(tfringgit, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bayarLayout.createSequentialGroup()
-                                .addComponent(jLabel20)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(tfeuro, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bayarLayout.createSequentialGroup()
-                                .addComponent(jLabel15)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(tfdollar, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bayarLayout.createSequentialGroup()
-                                .addComponent(jLabel14)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(tfrupiah, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE))))
+                                .addGap(87, 87, 87)
+                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(106, 106, 106))))
         );
         bayarLayout.setVerticalGroup(
@@ -466,30 +472,28 @@ public class Home extends javax.swing.JFrame {
             .addGroup(bayarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfrupiah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14))
-                .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(69, 69, 69)
+                .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(bayarLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15)
-                            .addComponent(tfdollar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(8, 8, 8)
-                        .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tfeuro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel20))
+                            .addComponent(rbrupiah)
+                            .addComponent(tfrupiah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel21)
-                            .addComponent(tfringgit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(bayarLayout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(49, 49, 49))
+                            .addComponent(rbdollar)
+                            .addComponent(tfdollar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rbeuro)
+                            .addComponent(tfeuro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rbringgit)
+                    .addComponent(tfringgit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton4)
+                .addGap(0, 40, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -528,14 +532,14 @@ public class Home extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 380, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE))
         );
 
         pack();
@@ -582,13 +586,42 @@ public class Home extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         float rupiah, dollar, euro, ringgit;
-        rupiah=Float.parseFloat(tfrupiah.getText());
-        dollar=(float)(rupiah*0.000071);
-        euro=(float)(rupiah*0.000059);
-        ringgit=(float)(rupiah*0.00029);
-        tfdollar.setText(""+dollar);
-        tfeuro.setText(""+euro);
-        tfringgit.setText(""+ringgit);
+        if(rbrupiah.isSelected()){
+            rupiah=Float.parseFloat(tfrupiah.getText());
+            dollar=(float)(rupiah*0.000071);
+            euro=(float)(rupiah*0.000059);
+            ringgit=(float)(rupiah*0.00029);
+            tfdollar.setText(""+dollar);
+            tfeuro.setText(""+euro);
+            tfringgit.setText(""+ringgit);
+        }
+        else if (rbdollar.isSelected()){
+            dollar=Float.parseFloat(tfdollar.getText());
+            rupiah=(float)(dollar*14091.68);
+            euro=(float)(dollar*0.83);
+            ringgit=(float)(dollar*4.06);
+            tfrupiah.setText(""+rupiah);
+            tfeuro.setText(""+euro);
+            tfringgit.setText(""+ringgit);
+        }
+        else if ((rbeuro.isSelected())){
+            euro=Float.parseFloat(tfeuro.getText());
+            rupiah=(float)(euro*17080.22);
+            dollar=(float)(euro*1.21);
+            ringgit=(float)(euro*4.92);
+            tfrupiah.setText(""+rupiah);
+            tfdollar.setText(""+dollar);
+            tfringgit.setText(""+ringgit);
+        }
+        else{
+            ringgit=Float.parseFloat(tfringgit.getText());
+            rupiah=(float)(ringgit*3457.21);
+            dollar=(float)(ringgit*0.25);
+            euro=(float)(ringgit*0.20);
+            tfrupiah.setText(""+rupiah);
+            tfdollar.setText(""+dollar);
+            tfeuro.setText(""+euro);
+        }
        
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -708,15 +741,11 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -732,6 +761,10 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel lbnama;
     private javax.swing.JLabel lbsaldo;
     private javax.swing.JButton pembayaran;
+    private javax.swing.JRadioButton rbdollar;
+    private javax.swing.JRadioButton rbeuro;
+    private javax.swing.JRadioButton rbringgit;
+    private javax.swing.JRadioButton rbrupiah;
     private javax.swing.JLabel rekening;
     private javax.swing.JTextField rektujuan;
     private javax.swing.JTextField tfdollar;
