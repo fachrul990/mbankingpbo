@@ -64,6 +64,8 @@ public class Home extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -412,21 +414,25 @@ public class Home extends javax.swing.JFrame {
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jpg/icons8_money_120px.png"))); // NOI18N
 
         rbringgit.setBackground(new java.awt.Color(57, 62, 70));
+        buttonGroup1.add(rbringgit);
         rbringgit.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         rbringgit.setForeground(new java.awt.Color(255, 211, 105));
         rbringgit.setText("Ringgit");
 
         rbrupiah.setBackground(new java.awt.Color(57, 62, 70));
+        buttonGroup1.add(rbrupiah);
         rbrupiah.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         rbrupiah.setForeground(new java.awt.Color(255, 211, 105));
         rbrupiah.setText("Rupiah");
 
         rbdollar.setBackground(new java.awt.Color(57, 62, 70));
+        buttonGroup1.add(rbdollar);
         rbdollar.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         rbdollar.setForeground(new java.awt.Color(255, 211, 105));
         rbdollar.setText("U.S Dollar");
 
         rbeuro.setBackground(new java.awt.Color(57, 62, 70));
+        buttonGroup1.add(rbeuro);
         rbeuro.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         rbeuro.setForeground(new java.awt.Color(255, 211, 105));
         rbeuro.setText("Euro");
@@ -751,6 +757,8 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JPanel info;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
