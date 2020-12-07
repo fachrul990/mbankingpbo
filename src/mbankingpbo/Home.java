@@ -47,7 +47,7 @@ public class Home extends javax.swing.JFrame {
         
         info.setVisible(false);
         transfer.setVisible(false);
-        bayar.setVisible(false);
+        konversi.setVisible(false);
 //        int saldoawal = saldo;
 //        saldoawal = 10000000;
 //        String ans=String.format("%,.2f", saldoawal);
@@ -93,7 +93,7 @@ public class Home extends javax.swing.JFrame {
         rektujuan = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
-        bayar = new javax.swing.JPanel();
+        konversi = new javax.swing.JPanel();
         tfdollar = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
@@ -106,6 +106,7 @@ public class Home extends javax.swing.JFrame {
         rbrupiah = new javax.swing.JRadioButton();
         rbdollar = new javax.swing.JRadioButton();
         rbeuro = new javax.swing.JRadioButton();
+        jButton5 = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
 
@@ -391,7 +392,7 @@ public class Home extends javax.swing.JFrame {
                 .addGap(36, 36, 36))
         );
 
-        bayar.setBackground(new java.awt.Color(57, 62, 70));
+        konversi.setBackground(new java.awt.Color(57, 62, 70));
 
         jButton4.setText("Konversi");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -430,69 +431,81 @@ public class Home extends javax.swing.JFrame {
         rbeuro.setForeground(new java.awt.Color(255, 211, 105));
         rbeuro.setText("Euro");
 
-        javax.swing.GroupLayout bayarLayout = new javax.swing.GroupLayout(bayar);
-        bayar.setLayout(bayarLayout);
-        bayarLayout.setHorizontalGroup(
-            bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bayarLayout.createSequentialGroup()
+        jButton5.setText("Clear");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout konversiLayout = new javax.swing.GroupLayout(konversi);
+        konversi.setLayout(konversiLayout);
+        konversiLayout.setHorizontalGroup(
+            konversiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(konversiLayout.createSequentialGroup()
                 .addGap(61, 61, 61)
                 .addComponent(jLabel22)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(bayarLayout.createSequentialGroup()
+                .addGroup(konversiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(konversiLayout.createSequentialGroup()
                         .addComponent(jLabel19)
                         .addGap(182, 182, 182))
-                    .addGroup(bayarLayout.createSequentialGroup()
+                    .addGroup(konversiLayout.createSequentialGroup()
                         .addGap(78, 78, 78)
-                        .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(bayarLayout.createSequentialGroup()
+                        .addGroup(konversiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(konversiLayout.createSequentialGroup()
                                 .addComponent(rbrupiah)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(tfrupiah, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(bayarLayout.createSequentialGroup()
-                                .addComponent(rbdollar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(tfdollar, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(bayarLayout.createSequentialGroup()
+                            .addGroup(konversiLayout.createSequentialGroup()
                                 .addComponent(rbeuro)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(tfeuro, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(bayarLayout.createSequentialGroup()
+                            .addGroup(konversiLayout.createSequentialGroup()
                                 .addComponent(rbringgit)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(tfringgit, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, bayarLayout.createSequentialGroup()
-                                .addGap(87, 87, 87)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, konversiLayout.createSequentialGroup()
+                                .addGroup(konversiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbdollar))
+                                .addGroup(konversiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(konversiLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(tfdollar, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(konversiLayout.createSequentialGroup()
+                                        .addGap(69, 69, 69)
+                                        .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                         .addGap(106, 106, 106))))
         );
-        bayarLayout.setVerticalGroup(
-            bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bayarLayout.createSequentialGroup()
+        konversiLayout.setVerticalGroup(
+            konversiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(konversiLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(69, 69, 69)
-                .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(bayarLayout.createSequentialGroup()
-                        .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(konversiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(konversiLayout.createSequentialGroup()
+                        .addGroup(konversiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(rbrupiah)
                             .addComponent(tfrupiah, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(konversiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(rbdollar)
                             .addComponent(tfdollar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(konversiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(rbeuro)
                             .addComponent(tfeuro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(bayarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(konversiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbringgit)
                     .addComponent(tfringgit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addGroup(konversiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 40, Short.MAX_VALUE))
         );
 
@@ -509,7 +522,7 @@ public class Home extends javax.swing.JFrame {
                     .addGap(0, 1, Short.MAX_VALUE)))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addComponent(bayar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(konversi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
@@ -523,7 +536,7 @@ public class Home extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addComponent(bayar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(konversi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -549,7 +562,7 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
         info.setVisible(false);
         transfer.setVisible(true);
-        bayar.setVisible(false);
+        konversi.setVisible(false);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -557,7 +570,7 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
         info.setVisible(true);
         transfer.setVisible(false);
-        bayar.setVisible(false);
+        konversi.setVisible(false);
         
         
         
@@ -568,7 +581,7 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
         info.setVisible(false);
         transfer.setVisible(false);
-        bayar.setVisible(true);
+        konversi.setVisible(true);
     }//GEN-LAST:event_pembayaranActionPerformed
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
@@ -693,6 +706,15 @@ public class Home extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton3MouseClicked
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        tfrupiah.setText("");
+        tfdollar.setText("");
+        tfeuro.setText("");
+        tfringgit.setText("");
+        
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -729,12 +751,12 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel bayar;
     private javax.swing.JPanel info;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -757,6 +779,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jltransfer;
+    private javax.swing.JPanel konversi;
     private javax.swing.JLabel labelnama;
     private javax.swing.JLabel lbnama;
     private javax.swing.JLabel lbsaldo;
